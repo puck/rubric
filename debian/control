@@ -1,0 +1,24 @@
+Source: librubric-perl
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 7), libclass-dbi-perl
+Build-Depends-Indep: perl
+Maintainer: Andrew Ruthven <andrew@etc.gen.nz>
+Standards-Version: 3.9.1
+Homepage: http://search.cpan.org/dist/Rubric/
+
+Package: librubric-perl
+Architecture: all
+Depends: ${misc:Depends}, ${perl:Depends}
+Description: a notes and bookmarks manager with tagging
+ This module is currently just a placeholder and a container for documentation.
+ You don't want to actually use Rubric, even if you want to use Rubric.
+ .
+ Rubric is a note-keeping system that also serves as a bookmark manager.  Users
+ store entries, which are small (or large) notes with a set of categorizing
+ "tags."  Entries may also refer to URIs.
+ .
+ Rubric was inspired by the excellent http://del.icio.us/ service and the
+ Notational Velocity note-taking software for Mac OS.
+ .
+ This description was automagically extracted from the module by dh-make-perl.
