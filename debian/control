@@ -1,7 +1,7 @@
 Source: librubric-perl
 Section: perl
 Priority: optional
-Build-Depends: debhelper (>= 7), libclass-dbi-perl
+Build-Depends: debhelper (>= 7), libclass-dbi-utf8-perl (>= 0.2), libapp-cmd-perl, libcgi-application-psgi-perl, libcrypt-rijndael-perl, libcrypt-cbc-perl, libfile-sharedir-perl, libhtml-tagcloud-perl, libplack-perl, libstring-tagstring-perl, libstring-truncate-perl, libtest-http-server-simple-perl (>= 0.2)
 Build-Depends-Indep: perl
 Maintainer: Andrew Ruthven <andrew@etc.gen.nz>
 Standards-Version: 3.9.1
