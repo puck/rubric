@@ -1,8 +1,7 @@
 use strict;
 use warnings;
 package Rubric::WebApp::Session;
-
-our $VERSION = '0.149';
+# ABSTRACT: the Rubric session plugin
 
 use CGI::Cookie;
 use Crypt::CBC;
@@ -75,9 +74,11 @@ sub get_cookie_payload {
 
   return __empty unless my $cookie_value = $self->query->cookie($COOKIE_NAME);
 
+  my $cipherer = $self->session_cipherer;
+
   my $data = eval {
     JSON->new->utf8->decode(
-      $self->session_cipherer->decrypt(decode_base64($cookie_value))
+      $cipherer->decrypt(decode_base64($cookie_value))
     );
   };
 

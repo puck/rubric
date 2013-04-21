@@ -1,8 +1,8 @@
 #!perl
-
+# PODNAME:  rubric
+# ABSTRACT: the Rubric command line interface
 use strict;
 use warnings;
 
 use Rubric::CLI;
-
 Rubric::CLI->new->run;

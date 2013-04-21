@@ -1,11 +1,11 @@
 #!perl
-#!perl -T
-
 use strict;
 use warnings;
 
+use Test::File::ShareDir -share => { -dist => { Rubric => 'share' } };
+
 use Test::More 'no_plan';
-use Test::WWW::Mechanize;
+use Test::WWW::Mechanize 1.04;
 
 use lib 't/lib';
 BEGIN { use_ok("Rubric::Config", 't/config/rubric.yml'); }
@@ -55,7 +55,8 @@ for my $iteration (1 .. 2) { # login/logout
     fields => { user => 'jjj', password => 'yellow' }
   );
 
-  $mech->content_contains("you are: jjj", "you are logged in");
+  $mech->content_contains("you are: jjj", "you are logged in")
+    or diag $mech->content;
 
   last if $iteration == 2;
 
