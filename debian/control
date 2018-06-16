@@ -1,7 +1,7 @@
 Source: librubric-perl
 Section: perl
 Priority: optional
-Build-Depends: debhelper (>= 7), libclass-dbi-utf8-perl (>= 0.2), libapp-cmd-perl, libcgi-application-psgi-perl, libcrypt-rijndael-perl, libcrypt-cbc-perl, libfile-sharedir-perl, libhtml-tagcloud-perl, libplack-perl, libstring-tagstring-perl, libstring-truncate-perl, libtest-http-server-simple-perl (>= 0.2)
+Build-Depends: debhelper (>= 7), libclass-dbi-utf8-perl (>= 0.2), libapp-cmd-perl, libcgi-application-psgi-perl, libcrypt-rijndael-perl, libcrypt-cbc-perl, libfile-sharedir-perl, libhtml-tagcloud-perl, libplack-perl, libstring-tagstring-perl, libstring-truncate-perl, libtest-http-server-simple-perl (>= 0.2), libclass-dbi-perl, libhtml-widget-factory-perl, libtest-file-sharedir-perl, libtest-www-mechanize-perl, libclass-dbi-abstractsearch-perl, libtemplate-perl, libdbd-sqlite3-perl, libdate-span-perl, libemail-address-perl, libhtml-calendarmonth-perl, libtemplate-plugin-class-perl, libemail-sender-perl
 Build-Depends-Indep: perl
 Maintainer: Andrew Ruthven <andrew@etc.gen.nz>
 Standards-Version: 3.9.1
@@ -9,7 +9,7 @@ Homepage: http://search.cpan.org/dist/Rubric/
 
 Package: librubric-perl
 Architecture: all
-Depends: ${misc:Depends}, ${perl:Depends}
+Depends: ${misc:Depends}, ${perl:Depends}, libapp-cmd-perl, libcgi-application-psgi-perl, libcrypt-rijndael-perl, libcrypt-cbc-perl, libfile-sharedir-perl, libhtml-tagcloud-perl, libplack-perl, libstring-tagstring-perl, libstring-truncate-perl, libclass-dbi-perl, libhtml-widget-factory-perl, libclass-dbi-abstractsearch-perl, libtemplate-perl, libdate-span-perl, libemail-address-perl, libhtml-calendarmonth-perl, libtemplate-plugin-class-perl, libemail-sender-perl, libyaml-perl
 Description: a notes and bookmarks manager with tagging
  This module is currently just a placeholder and a container for documentation.
  You don't want to actually use Rubric, even if you want to use Rubric.
